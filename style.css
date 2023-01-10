@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #2f363e;
+    /* background: url(https://source.unsplash.com/random/1920×1080/?time); */
+    
+    
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(14, 196, 96); */
+}
+.con{
+    
+    border-radius: 2em;
+    box-shadow: 2.5em 2.5em 7.5em rgba(0, 0, 0, 0.75),
+    1em 1em 7em rgb(0, 0,0, 0.25),
+    inset .5em .5em 1em rgba(0, 0, 0, 5) ,
+    inset .5em .5em 2em rgba(0, 0, 0, 2) ,
+    inset -.5em -.5em 1.5em rgba(0, 0, 0, 0.75) ;
+    border-top-left-radius: 22em;
+    border-top-right-radius: 22em;
+    position: relative;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #2f363e;
+    
+
+}
+.clock{
+    height: 45em;
+    position: relative;
+    width: 45em;
+    border-radius: 50%;
+    background-color: #2f363e ;
+    box-shadow: 1em 5em 7em rgba(0, 0, 0, 25),
+    inset .5em .5em 1em rgba(0, 0, 0, 5) ,
+    inset .5em .5em 2em rgba(0, 0, 0, 2) ,
+    inset -.5em -.5em 1.5em rgba(0, 0, 0, 0.75) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    /* border: 1px solid red; */
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: .8em;
+    height: .8em;
+    background-color: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.clock span{
+    position: absolute;
+    inset: 2em;
+    color: white;
+    text-align: center;
+    transform: rotate(calc(30deg*var(--i)));
+}
+.clock span b{
+    font-size: 3em;
+    opacity: 0.25;
+    font-weight: 600;
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+}
+.circle{
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0,0, 0.25);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.circle2{
+    width: 24em;
+    height: 24em;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0,0, 0.25);
+    z-index: 9;
+}
+.circle3{
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0,0, 0.25);
+    z-index: 8;
+}
+.circle i{
+    position: absolute;
+    width: .6em;
+    height: 50%;
+    background-color: red;
+    background-color: var(--clr);
+    opacity: 0.7;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+.circle :nth-child(1) i{
+width: .2em;
+}
+
+.circle :nth-child(2) i{
+    width: .6em;
+    }
+
+.circle::before{
+    content: '';
+    position: absolute;
+    top: -.8em;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--clr);
+    box-shadow: 0 0 2em var(--clr);
+
+    border-radius: 50%;
+}
+
+/* digital clock style */
+
+.time{
+    margin-bottom: 1em;
+    display: flex;
+    padding: .5em 1em;
+    font-size: 3.2em;
+    font-weight: 600;
+    border: 2px solid rgb(0, 0, 0,0.5);
+    border-radius: 4em;
+    box-shadow: .5em .5em 2em rgb(0, 0, 0,0.5),
+    inset .5em .5em 2em rgb(255, 255, 255,0.2),
+    inset -.5em -.5em 1.5em rgb(0, 0, 0,0.75)   ;
+    
+}
+
+.time div{
+    position: relative;
+    width: 1.5em;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    color: var(--clr);
+}
+
+.time div:nth-child(1)::after,
+.time div:nth-child(2)::after
+{
+    content: ':';
+    position: absolute;
+    /* right: -.4em; */
+
+}
+
+.time div:last-child{
+    font-size: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-left: 1em;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+}
+
+/* @media only screen and (max-width: 390px) {
+    html{
+        font-size: 30.5%;
+    }
+} */
