@@ -195,8 +195,8 @@ width: .2em;
     }
 }
 
-/* @media only screen and (max-width: 390px) {
-    html{
-        font-size: 30.5%;
-    }
-} */
+@media  (max-width : 640px) {
+   .clock{ height: 36em;
+        width: 36em;
+   }
+}
